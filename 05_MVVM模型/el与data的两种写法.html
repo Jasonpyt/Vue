@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+• MVVM模型
+• M：模型（Model）：data中的数据
+• V：视图（View）：模板代码
+• VM：视图模型（ViewModel）：Vue实例
+• 备注：
+• data中所有的属性，最后都出现在vm身上
+• vm身上的所有属性及Vue原型上的所有属性，在Vue模板中都可以直接使用。
+ -->
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>MVVM模型</title>
+</head>
+
+<body>
+ 
+
+    <div id="root">
+        <h1>{{name}}</h1>
+        <h1>{{age}}</h1>
+        <h1>{{$emit}}</h1>
+        <h1>{{1+1}}</h1>
+        <h1>{{$data}}</h1>
+    </div>
+    <script>
+
+var vm = new Vue({
+    el:'#root',
+    data:function(){
+        
+        return{
+            name:'jerryLau',
+            age:18
+        }
+        
+    }
+})
+
+console.log(vm);
+
+    </script>
+</body>
+
+</html>
